@@ -45,28 +45,17 @@ n = 1
 # coordinateの中身のリストをset関数でソートさせ、もう１つのsetとの共通部分をリスト化させ、比較する
 def judgment(coordinate):
     # 横のパターン
-    if [1, 2, 3] == list(set([1, 2, 3]) & set(coordinate)):
-        return True
-    elif [4, 5, 6] == list(set([4, 5, 6]) & set(coordinate)):
-        return True
-    # 効かない
-    elif [7, 8, 9] == list(set([7, 8, 9]) & set(coordinate)):
-        return True
+    if [1, 2, 3] == list(set([1, 2, 3]) & set(coordinate)): return True
+    elif [4, 5, 6] == list(set([4, 5, 6]) & set(coordinate)): return True
+    elif [7, 8, 9] == list(set([7, 8, 9]) & set(coordinate)): return True
     # 縦のパターン
-    elif [1, 4, 7] == list(set([1, 4, 7]) & set(coordinate)):
-        return True
-    # 効かない
-    elif [2, 5, 8] == list(set([2, 5, 8]) & set(coordinate)):
-        return True
-    # 効かない
-    elif [3, 6, 9] == list(set([3, 6, 9]) & set(coordinate)):
-        return True
+    elif [1, 4, 7] == list(set([1, 4, 7]) & set(coordinate)): return True
+    elif [2, 5, 8] == list(set([2, 5, 8]) & set(coordinate)): return True
+    elif [3, 6, 9] == list(set([3, 6, 9]) & set(coordinate)): return True
     # 斜めのパターン
-    elif [1, 5, 9] == list(set([1, 5, 9]) & set(coordinate)):
-        return True
-    elif [3, 5, 7] == list(set([3, 5, 7]) & set(coordinate)):
-        return True
-    return False
+    elif [1, 5, 9] == list(set([1, 5, 9]) & set(coordinate)): return True
+    elif [3, 5, 7] == list(set([3, 5, 7]) & set(coordinate)): return True
+    else: return False
 
 while True:
     # 奇数回の時
